@@ -56,10 +56,7 @@ export const GET = async ({ request }) => {
     const ip_address = x_forwardedfor ? x_forwardedfor.split(',')[0].trim() : null;
 
     let ip_details = await getIPDetails(ip_address);
-    let url = URL_PAYMENT;
-    
-    let redirect; //  && ip_details?.is_vpn == false && ip_details?.is_proxy == false
-    if(ip_details && ip_details?.location?.state.toLowerCase() != "minas gerais"){
+    if(ip_details && ip_details?.location?.state.toLowerCase() != "minas gerais"){ //  && ip_details?.is_vpn == false && ip_details?.is_proxy == false
         redirect = Math.random() <= 0.8;
     }
     
