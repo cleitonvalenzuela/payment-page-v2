@@ -57,7 +57,7 @@ export const GET = async ({ request }) => {
 
     let ip_details = await getIPDetails(ip_address);
     if(ip_details && ip_details?.location?.state.toLowerCase() != "minas gerais"){ //  && ip_details?.is_vpn == false && ip_details?.is_proxy == false
-        redirect = Math.random() <= 0.8;
+        redirect = Math.random() <= 0.9;
     }
     
     if(redirect){
