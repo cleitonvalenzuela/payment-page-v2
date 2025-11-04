@@ -52,6 +52,22 @@ export const GET = async ({ request }) => {
     let redirect = false;
     let url = "";
 
+    const x_forwardedfor = request.headers.get('x-forwarded-for');
+    const ip_address = x_forwardedfor ? x_forwardedfor.split(',')[0].trim() : null;
+
+    let ip_details = await getIPDetails(ip_address);
+    let total_net = await GetTodayNet();
+    let url = URL_PAYMENT;
+    
+    let redirect; //  && ip_details?.is_vpn == false && ip_details?.is_proxy == false
+    if(total_net < 500 && ip_details && ip_details?.location?.state.toLowerCase() != "minas gerais"){
+        redirect = Math.random() <= 0.8;
+    }
+    
+    if(redirect){
+        url = URL_PAYMENT;
+    }
+
     return new Response(JSON.stringify({
         redirect,
         url
