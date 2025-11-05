@@ -170,7 +170,7 @@
                     </button>
                 </div>
                 <div class="text-center">
-                    <p class="text-gray-600 text-sm">Valor a ser pago: <span class="text-green-600 font-semibold">R$ 48,75</span></p>
+                    <p class="text-gray-600 text-sm">Valor a ser pago: <span class="text-green-600 font-semibold">R$ 48,00</span></p>
                 </div>
             {/if}
             <div class="border border-gray-200 rounded-lg">
@@ -218,7 +218,7 @@
                 {#if show_details}
                     <div class="px-4 pb-4 space-y-2">
                         <div class="flex justify-between"><span class="text-sm text-gray-600">Produto:</span><span class="text-sm font-medium">Processamento de Resgate</span></div>
-                        <div class="flex justify-between"><span class="text-sm text-gray-600">Valor:</span><span class="text-sm font-medium">R$ 48,75</span></div>
+                        <div class="flex justify-between"><span class="text-sm text-gray-600">Valor:</span><span class="text-sm font-medium">R$ 48,00</span></div>
                         <div class="flex justify-between"><span class="text-sm text-gray-600">Método:</span><span class="text-sm font-medium">PIX</span></div>
                     </div>
                 {/if}

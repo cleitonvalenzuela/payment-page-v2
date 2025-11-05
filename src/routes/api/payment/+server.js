@@ -17,7 +17,7 @@ export const POST = async ({ request, locals, getClientAddress, cookies }) => {
 
     // Verifica se todos os dados sao validos.
     if(validateFullname(fullname) && validateDocument(document)){
-        const payment = await createNewPayment(document, fullname, email, phone, 48.75, ip_address);
+        const payment = await createNewPayment(document, fullname, email, phone, 48.00, ip_address);
         console.log("New payment:", payment);
 
         const { data, error } = await supabase

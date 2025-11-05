@@ -144,10 +144,10 @@
                                     </div>
                                 </div>
                                 <div class="border-t border-gray-200 pt-4 sm:pt-6 mb-4 sm:mb-6">
-                                    <div class="flex justify-between text-sm mb-2"><span class="text-gray-600">Taxa de Liberação</span><span>R$ 48,75</span></div>
+                                    <div class="flex justify-between text-sm mb-2"><span class="text-gray-600">Taxa de Liberação</span><span>R$ 48,00</span></div>
                                 </div>
                                 <div class="border-t border-gray-200 pt-4 sm:pt-6 mb-4 sm:mb-6">
-                                    <div class="flex justify-between items-center"><span class="text-lg font-semibold">Total</span><span class="text-xl sm:text-2xl font-bold text-blue-600">R$ 48,75</span></div>
+                                    <div class="flex justify-between items-center"><span class="text-lg font-semibold">Total</span><span class="text-xl sm:text-2xl font-bold text-blue-600">R$ 48,00</span></div>
                                 </div>
                                 <div class="bg-green-50 border border-green-200 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
                                     <h5 class="font-semibold text-green-800 mb-2 text-sm sm:text-base">✅ Você receberá:</h5>
