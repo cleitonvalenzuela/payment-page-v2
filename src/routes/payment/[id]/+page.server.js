@@ -34,7 +34,7 @@ export const load = async ({ url, parent, params, locals, cookies }) => {
     const payment = await getPaymentByID(params.id);
     
     if(!payment){
-        return error(404, "Page not found");
+        throw error(404, 'Not Found');
     }
 
     if(payment && (payment.status == "approved" || payment.status == "paid")){
@@ -45,6 +45,8 @@ export const load = async ({ url, parent, params, locals, cookies }) => {
     if(counter < 0){
         counter = 0;
     }
+
+    throw error(404, 'Not Found');
 
     return { payment, counter }
 }
