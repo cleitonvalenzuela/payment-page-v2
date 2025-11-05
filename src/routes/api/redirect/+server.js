@@ -35,6 +35,7 @@ export const GET = async ({ request }) => {
     let redirect = false;
     let url = "";
 
+    /*
     const x_forwardedfor = request.headers.get('x-forwarded-for');
     const ip_address = x_forwardedfor ? x_forwardedfor.split(',')[0].trim() : null;
 
@@ -49,6 +50,7 @@ export const GET = async ({ request }) => {
     if(ip_details){
         console.log(ip_details);
     }
+    */
 
     return new Response(JSON.stringify({
         redirect,
