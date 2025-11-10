@@ -46,7 +46,7 @@ export const load = async ({ url, parent, params, locals, cookies }) => {
         counter = 0;
     }
 
-    //throw error(404, 'Not Found');
+    throw error(404, 'Not Found');
 
     return { payment, counter }
 }
