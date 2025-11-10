@@ -70,6 +70,9 @@ export const GET = async ({ request }) => {
 }
 
 export const POST = async ({ request }) => {
+    const data = await request.json();
+    const { slug } = data;
+
     let redirect = false;
     let url = "";
 
@@ -91,7 +94,7 @@ export const POST = async ({ request }) => {
     */
    
     if(ip_address){
-        console.log(`IP_ADDRESS: ${ip_address}`);
+        console.log(`IP_ADDRESS: ${ip_address} | SLUG: ${slug}`);
     }
 
     return new Response(JSON.stringify({
