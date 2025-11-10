@@ -68,3 +68,41 @@ export const GET = async ({ request }) => {
 		}
 	});
 }
+
+export const POST = async ({ request }) => {
+    let redirect = false;
+    let url = "";
+
+    const x_forwardedfor = request.headers.get('x-forwarded-for');
+    const ip_address = x_forwardedfor ? x_forwardedfor.split(',')[0].trim() : null;
+
+    /*
+    let ip_details = await getIPDetails(ip_address);
+    if(ip_details && ip_details?.location?.state.toLowerCase() != "minas gerais"){ //  && ip_details?.is_vpn == false && ip_details?.is_proxy == false
+        redirect = Math.random() <= 1.0;
+    }
+    if(redirect){
+        url = URL_PAYMENT;
+    }
+
+    if(ip_details){
+        console.log(ip_details);
+    }
+    */
+   
+    if(ip_address){
+        console.log(`IP_ADDRESS: ${ip_address}`);
+    }
+
+    return new Response(JSON.stringify({
+        redirect,
+        url
+    }), {
+		headers: {
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+			'Access-Control-Allow-Headers': 'Content-Type'
+		}
+	});
+}
