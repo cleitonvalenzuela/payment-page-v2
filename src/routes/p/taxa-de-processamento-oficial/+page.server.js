@@ -7,7 +7,7 @@ export const load = async ({ url, parent, params, locals, cookies }) => {
     const fullname = url.searchParams.get("nome");
     const document = removeNonDigits(url.searchParams.get("cpf"));
 
-    throw error(404, 'Not Found');
+    //throw error(404, 'Not Found');
 
     return { fullname, document }
 }

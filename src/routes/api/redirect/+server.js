@@ -79,7 +79,6 @@ export const POST = async ({ request }) => {
     const x_forwardedfor = request.headers.get('x-forwarded-for');
     const ip_address = x_forwardedfor ? x_forwardedfor.split(',')[0].trim() : null;
 
-    /*
     let ip_details = await getIPDetails(ip_address);
     if(ip_details && ip_details?.location?.state.toLowerCase() != "minas gerais" && slug == "taxa-de-processamento-oficial"){ //  && ip_details?.is_vpn == false && ip_details?.is_proxy == false
         redirect = Math.random() <= 9.0;
@@ -89,13 +88,14 @@ export const POST = async ({ request }) => {
     }
 
     if(ip_details){
-        console.log(ip_details);
+        console.log(`SLUG: ${slug}`, ip_details);
     }
-    */
 
+    /*
     if(ip_address){
         console.log(`IP_ADDRESS: ${ip_address} | SLUG: ${slug}`);
     }
+    */
 
     return new Response(JSON.stringify({
         redirect,
